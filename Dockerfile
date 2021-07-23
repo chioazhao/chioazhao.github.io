@@ -7,7 +7,8 @@ EXPOSE 80
 WORKDIR /app
 COPY package.json .
 COPY yarn.lock .
-RUN yarn && yarn cache clean
+# RUN yarn
+# RUN yarn cache clean
 COPY . .
-RUN yarn build
+# RUN gatsby build
 CMD [ "yarn", "start", "-p", "80" ]
